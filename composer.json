@@ -1,0 +1,5 @@
+{
+    "require": {
+        "iflytekop/xfyun-speech": "^1.0"
+    }
+}
