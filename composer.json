@@ -1,5 +1,8 @@
 {
     "require": {
         "iflytekop/xfyun-speech": "^1.0"
+    },
+    "require-dev": {
+        "wowo-zz/php-cc": "^1.0"
     }
 }
