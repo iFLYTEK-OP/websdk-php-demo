@@ -2,6 +2,8 @@
 
 include './vendor/autoload.php';
 
+$appId = '';// 需要填入app_id
+$secretKey = '';// 需要填入secret_key
 $client = new IFlytek\Xfyun\Speech\LfasrClient('', '');
 echo "开始上传音频...\n";
 $taskId = $client->combineUpload(__DIR__ . '/lfasrTest.wav');
