@@ -2,7 +2,7 @@
 
 include './vendor/autoload.php';
 
-$client = new IFlytek\Xfyun\Speech\LfasrClient('5ea62f02', '826e055fff64581ee2adb9b137a37568');
+$client = new IFlytek\Xfyun\Speech\LfasrClient('', '');
 echo "开始上传音频...\n";
 $taskId = $client->combineUpload(__DIR__ . '/lfasrTest.wav');
 echo "音频上传成功，task_id: $taskId\n";
