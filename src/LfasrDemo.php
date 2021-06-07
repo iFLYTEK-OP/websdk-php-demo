@@ -1,12 +1,16 @@
 <?php
 
-include './vendor/autoload.php';
+namespace test;
 
-$appId = '';// 需要填入app_id
-$secretKey = '';// 需要填入secret_key
-$client = new IFlytek\Xfyun\Speech\LfasrClient('', '');
+use IFlytek\Xfyun\Speech\LfasrClient;
+
+include __DIR__ . '/../vendor/autoload.php';
+
+$appId = getenv('PHPSDK_SPEECH_LFASR_APPID');// 此行代码需要更换为用户自己的appid，例如：$appId = '5ca1e5**'
+$secretKey = getenv('PHPSDK_SPEECH_LFASR_SECRETKEY');// 此行代码需要更换为用户自己的secretKey，例如：$secretKey = '4e41a9b93846815****************'
+$client = new LfasrClient($appId, $secretKey);
 echo "开始上传音频...\n";
-$taskId = $client->combineUpload(__DIR__ . '/lfasrTest.wav');
+$taskId = $client->combineUpload(__DIR__ . '/../resource/lfasrTest.wav');
 echo "音频上传成功，task_id: $taskId\n";
 do {
     $progress = json_decode($client->getProgress($taskId)->getBody()->getContents(), true);
@@ -31,4 +35,5 @@ do {
     sleep(5);
 } while (true);
 $result = $client->getResult($taskId)->getBody()->getContents();
-echo $result . "\n";
+echo $result;
+return $result;

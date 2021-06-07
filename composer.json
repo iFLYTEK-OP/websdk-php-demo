@@ -3,6 +3,7 @@
         "iflytekop/xfyun-speech": "^1.0"
     },
     "require-dev": {
-        "wowo-zz/php-cc": "^1.0"
+        "wowo-zz/php-cc": "^1.0",
+        "phpunit/phpunit": "^6.2"
     }
 }
