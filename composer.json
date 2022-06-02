@@ -1,6 +1,7 @@
 {
     "require": {
-        "iflytekop/xfyun-speech": "^1.0"
+        "iflytekop/xfyun-sdk": "^2",
+        "ext-json": "*"
     },
     "require-dev": {
         "wowo-zz/php-cc": "^1.0",

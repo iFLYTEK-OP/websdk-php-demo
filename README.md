@@ -2,7 +2,7 @@
 
 ### 安装
 ```sh
-composer require iflytekop/xfyun-speech
+composer require iflytekop/xfyun-sdk
 ```
 如果下载失败，请使用如下命令更换国内源
 
